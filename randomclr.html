@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .set{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-top: 50px;
+        }
+    </style>
+</head>
+<body>
+    <div class="set">
+     <button id="btn" onclick= " quote() , BackColor()" >click me</button>
+     <h2 id="hh"></h2>
+    </div>
+    <!-- <button id="btn" onclick="BackColor()">A MESSAGE</button> -->
+    <script>
+        
+        function quote(){
+            let shi = [
+                "stay hungry,stay foolish.",
+                "best way to predict the future is to invest it",
+                "Be the change that you wish to see in the world.",
+                "growth and comfort do not exist.",
+                "Opportunity is missed by most people because it is dressed in overalls and looks like work.",
+                "Technology is best when it brings people together",
+                "The real problem is not wheather machines think but wheather men do. ",
+                "software comes from heaven when you have good hardware.-..."
+            ];
+             quotation = shi[Math.floor(Math.random() * shi.length)];
+            let h11=document.getElementById("hh").innerHTML = quotation;
+            
+
+            let btn=document.getElementById("btn");
+            btn.style.backgroundColor="transparent";
+            btn.style.border="2px solid black";
+          
+        }
+        let btn=document.getElementById("btn");
+        btn.style.height="50px";
+        btn.style.borderRadius="20px"
+        btn.style.fontSize="20px";
+        btn.style.boxShadow="0px 0px 10px";
+        btn.style.color="blue"
+        btn.style.border="2px solid black"
+ 
+ 
+
+        function color (){
+            let a = "0123456789ABCDEF";
+            let color = "#";
+            for(i=0;i<6;i++){
+                color += a[Math.floor(Math.random() * 14 )];
+
+            }
+            return color;
+
+        }
+        function BackColor(){
+            document.body.style.backgroundColor = color();
+        }
+
+    </script>
+</body>
+</html> 
